@@ -259,7 +259,7 @@ function setTheBalance(num) {
 }
 
 //Waits for the balance on account and returns Planets Balance. Then returns transaction confirmation
-const runThatShh = async function () {
+const runTxs = async function () {
     for (let i = 0; i < myWallets.length; i++) {
         await logAssetHolding(algodclient, walletKeys[i].addr, assetID);
         if (planetsBalance > 0) {
@@ -273,4 +273,4 @@ const runThatShh = async function () {
     }
 }
 
-runThatShh();
+runTxs();
